@@ -1,0 +1,39 @@
+.example-container {
+    height: 100%;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .mat-sidenav {
+    width: 225px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .mat-sidenav-content {
+    margin-left: 200px;
+    display: flex;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .menu-icon-arrow {
+    font-size: 18px;
+  }

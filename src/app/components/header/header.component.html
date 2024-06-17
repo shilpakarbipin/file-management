@@ -1,0 +1,70 @@
+<div class="file-header">
+    <div class="file-header-title">
+        <span><img src="../../../favicon.ico" height="18" width="18"  alt="File"> File</span>
+        <span>Admin</span>
+    </div>    
+</div>
+
+<!-- to do: add tabs -->
+<!-- <mat-tab-group animationDuration="0ms">
+    <mat-tab label="Home"> Home </mat-tab>
+    <mat-tab label="View"> View </mat-tab>
+</mat-tab-group> -->
+
+<div class="file-tabs">
+    <div class="header-menu" (click)="createNewFolder()">
+        <span class="header-menu-create-new-folder">
+            <img src="assets/images/folder.png" height="20" width="20" alt="Create New Folder">
+        </span>
+        <span class="header-menu-title">
+            New folder
+        </span>
+    </div>
+    <div class="d-flex header-menu-vertical-divider">
+        <div class="vr"></div>
+    </div>
+    <div class="header-menu">
+        <span class="header-menu-create-new-folder">
+            <img src="assets/images/folder.png" height="20" width="20" alt="Create New Folder">
+        </span>
+        <span class="header-menu-title">
+            Copy
+        </span>
+    </div>
+    <div class="d-flex header-menu-vertical-divider">
+        <div class="vr"></div>
+    </div>
+    <div class="header-menu">
+        <span class="header-menu-create-new-folder">
+            <img style="background-position: 0 -400px !important;" src="assets/images/filemanagericons.png" height="20" width="20" alt="Create New Folder">
+        </span>
+        <span class="header-menu-title">
+            Delete
+        </span>
+    </div>
+    <div class="d-flex header-menu-vertical-divider">
+        <div class="vr"></div>
+    </div>
+    <div class="header-menu" (click)="uploadFilesOrFolder()">
+        <span class="header-menu-create-new-folder">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="upload"></mat-icon>
+        </span>
+        <span class="header-menu-title">
+            Upload
+        </span>
+    </div>
+    <div class="d-flex header-menu-vertical-divider">
+        <div class="vr"></div>
+    </div>
+    <div class="header-menu">
+        <span class="header-menu-create-new-folder">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="download"></mat-icon>
+        </span>
+        <span class="header-menu-title">
+            Down load
+        </span>
+    </div>
+    <div class="d-flex header-menu-vertical-divider">
+        <div class="vr"></div>
+    </div>
+</div>

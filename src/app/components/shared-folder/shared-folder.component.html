@@ -1,0 +1,8 @@
+<mat-card class="card-folder" (dblclick)="doubleClick()" *ngFor="let item of sharedItemsList">
+    <mat-card-header>
+      <img *ngIf="item.extension === null" title=" {{item.name}} &#10; Type: Folder &#10; Date modified: {{ item.modifiedAt }} &#10; Size: {{ item.size }} KB" src="assets/images/folder.png"  alt="folder">
+      <img *ngIf="item.extension === 'pdf'" title=" {{item.name}} &#10; Type: PDF File &#10; Date modified: {{ item.modifiedAt }} &#10; Size: {{ item.size }} KB" src="assets/images/pdf.png"  alt="pdf file">
+      <img *ngIf="item.extension === 'txt'" title=" {{item.name}} &#10; Type: Txt File &#10; Date modified: {{ item.modifiedAt }} &#10; Size: {{ item.size }} KB" src="assets/images/txt.png"  alt="text file">
+    </mat-card-header>
+    <span>{{ item.name }} </span>
+</mat-card>

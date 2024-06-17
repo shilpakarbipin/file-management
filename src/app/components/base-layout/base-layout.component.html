@@ -1,0 +1,38 @@
+<app-header></app-header>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+        <mat-list role="list">          
+            <ul class="menu-items">      
+                <li class="menu-list" routerLinkActive="active" [routerLink]="'dashboard'" >
+                  <span class="material-symbols-outlined menu-icon-arrow">chevron_right</span>
+                  <img src="assets/images/rootfolder.png" class="child-menu-icon" width="20" height="20" alt="folder">
+                  <a class="menu-ancor" >Dashboard</a>
+                </li>
+                <li class="menu-list" routerLinkActive="active" [routerLink]="'shared'" >
+                    <span class="material-symbols-outlined menu-icon-arrow">chevron_right</span>
+                    <img src="assets/images/rootfolder.png" class="child-menu-icon" width="20" height="20" alt="folder">
+                    <a class="menu-ancor" >Shared</a>
+                  </li>
+                  <li class="menu-list" routerLinkActive="active" [routerLink]="'personal'" >
+                    <span class="material-symbols-outlined menu-icon-arrow">chevron_right</span>
+                    <img src="assets/images/rootfolder.png" class="child-menu-icon" width="20" height="20" alt="folder">
+                    <a class="menu-ancor" >Personal</a>
+                  </li>
+                  <li class="menu-list" routerLinkActive="active" [routerLink]="'public-links'" >
+                    <span class="material-symbols-outlined menu-icon-arrow">chevron_right</span>
+                    <img src="assets/images/rootfolder.png" class="child-menu-icon" width="20" height="20" alt="folder">
+                    <a class="menu-ancor" >Public Links</a>
+                  </li>
+              </ul>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="mat-sidenav-content d-flex">
+        <router-outlet></router-outlet>
+        <!-- <mat-card class="card-folder" (dblclick)="doubleClick()" *ngFor="let item of itemsList">
+          <mat-card-header>
+            <img src="assets/images/folder.png"  alt="folder">
+          </mat-card-header>
+          <span>{{ item.name }} </span>
+        </mat-card> -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>

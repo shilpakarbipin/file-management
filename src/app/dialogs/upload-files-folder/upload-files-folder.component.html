@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Upload Files Or Folder</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onClose()"></button>
+</div>
+<div class="modal-body">
+    <input type="file" style="display: none;" multiple #fileInput id="fileLoader" name="files" (change)="onFileSelected($event)">
+    <input type="file" style="display: none;" webkitdirectory directory multiple #folderInput id="fileLoader" name="files" (change)="onFileSelected($event)">
+    <div *ngIf="selectedFiles" class="selected-files">
+    <!-- <ul>
+        <li *ngFor="let file of selectedFiles">{{ file.name }}</li>
+    </ul> -->
+    <mat-card class="card-folder" #cardList (click)="toggleItemSelection(file)" [ngClass]="{'selected': isSelected(file)}" *ngFor="let file of selectedFiles">
+        <mat-card-header>
+          <img *ngIf="file.type === null" title=" {{file.name}} &#10; Type: Folder &#10; Size: {{ file.size }} KB" src="assets/images/folder.png"  alt="folder">
+          <img *ngIf="file.type === 'application/pdf'" title=" {{file.name}} &#10; Type: PDF File &#10; Size: {{ file.size }} KB" src="assets/images/pdf.png"  alt="pdf file">
+          <img *ngIf="file.type === 'text/html'" title=" {{file.name}} &#10; Type: Txt File &#10; Size: {{ file.size }} KB" src="assets/images/txt.png"  alt="text file">
+          <img ng-else="file.type === 'text/html'" title=" {{file.name}} &#10; Type: Txt File &#10; Size: {{ file.size }} KB" src="assets/images/txt.png"  alt="text file">
+        </mat-card-header>
+        <span>{{ file.name }} </span>
+    </mat-card>
+    <span class="no-data-found" *ngIf="selectedFiles.length === 0"> Select files to be uploaded </span>
+    </div>
+    
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="fileInput.click()">Select files</button>
+    <button type="button" class="btn btn-primary" (click)="folderInput.click()">Select folder</button>
+    <button type="button" class="btn btn-primary" (click)="uploadFilesOrFolder()">Upload</button>
+</div>

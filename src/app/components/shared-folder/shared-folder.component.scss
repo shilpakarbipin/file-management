@@ -1,0 +1,49 @@
+.child-menu-icon {
+    margin-right: 5px;
+}
+
+.menu-icon-arrow.has-no-child {
+    visibility: hidden;
+}
+
+  .menu-items {
+    // display: flex;
+  }
+
+  .card-folder {
+    width: 100px;
+    display: flex;
+    height: 130px;
+    padding: 0.5rem;
+    margin: 1rem;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    border: 1px solid transparent;
+    padding: 2px 3px 2px 3px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    -webkit-backface-visibility: hidden;
+    background-color: unset;
+    box-shadow: none;
+  }
+
+  .card-folder:hover {
+    background-color: rgba(0,140,255,.2);
+  }
+
+  .mat-mdc-card-header {
+    padding: 0px;
+  }
+
+  .mdc-card__actions {
+    display: block;
+  }
+
+  .container {
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+  }
+  

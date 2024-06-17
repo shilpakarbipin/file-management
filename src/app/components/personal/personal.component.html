@@ -1,0 +1,35 @@
+<!-- <mat-card class="card-folder" style="padding-bottom: 20px;" (contextmenu)="onRightClick($event, {content: 'Item generated #' + item})" (dblclick)="doubleClick()" *ngFor="let item of itemsList">
+    <mat-card-header>
+      <img src="assets/images/folder.png"  alt="folder">
+    </mat-card-header>
+    <span>{{ item.name }} </span>
+</mat-card> -->
+
+<div class=""> 
+  @for(item of itemsList; track item) {
+    <mat-card class="card-folder" style="padding-bottom: 20px;" (contextmenu)="onRightClick($event, {content: 'Item generated #' + item.name})" (dblclick)="doubleClick()">
+      <mat-card-header>
+        <img src="assets/images/folder.png"  alt="folder">
+      </mat-card-header>
+      <span>{{ item.name }} </span>
+    </mat-card>
+  } 
+ 
+  <!-- a hidden div is created to set the position of appearance of the menu--> 
+  <div 
+          style="visibility: hidden; position: fixed;" 
+          [style.left.px]="menuTopLeftPosition.x" 
+          [style.top.px]="menuTopLeftPosition.y" 
+          [matMenuTriggerFor]="rightMenu"></div> 
+ 
+  <!-- standard material menu --> 
+  <mat-menu #rightMenu="matMenu"> 
+    <ng-template matMenuContent let-item="item"> 
+      <!-- <button mat-menu-item>Clicked {{item.content}}</button>  -->
+      <span mat-menu-item>Copy</span> 
+      <span mat-menu-item>Rename</span> 
+      <span mat-menu-item>Delete</span> 
+      <span mat-menu-item>Download</span>
+    </ng-template> 
+  </mat-menu> 
+</div> 
